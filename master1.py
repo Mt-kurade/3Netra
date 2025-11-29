@@ -166,9 +166,6 @@ try:
         # Overlay status text + last saved names
         cv2.putText(display, f"Status: {'ALERT' if alert_active else 'OK'}", (10,30),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.9, (0,0,255) if alert_active else (0,200,0), 2)
-
-        # Show last saved filenames on-screen (if any)
-        # (list files in OUTPUT_DIR and show most recent if present)
         try:
             files = sorted(os.listdir(OUTPUT_DIR))
             if files:
@@ -202,6 +199,7 @@ finally:
     cap.release()
     cv2.destroyAllWindows()
     print("[INFO] Exiting, resources released.")
+
 
 
 
