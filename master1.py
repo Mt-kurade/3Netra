@@ -48,9 +48,6 @@ recording_writer = None
 post_frames_left = 0
 current_clip_name = None
 
-# --------------------------
-# HELPERS
-# --------------------------
 def timestamp_str():
     return datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
 
@@ -208,4 +205,5 @@ finally:
     cap.release()
     cv2.destroyAllWindows()
     print("[INFO] Exiting, resources released.")
+
 
