@@ -70,9 +70,6 @@ def start_clip_writer(pre_frames, first_frame):
     print("[SAVED] clip started ->", fname)
     return writer, fname
 
-# --------------------------
-# MAIN LOOP
-# --------------------------
 try:
     while True:
         start_time = time.time()
@@ -205,5 +202,6 @@ finally:
     cap.release()
     cv2.destroyAllWindows()
     print("[INFO] Exiting, resources released.")
+
 
 
