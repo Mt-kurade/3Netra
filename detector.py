@@ -73,8 +73,6 @@ with mp_pose.Pose(min_detection_confidence=0.5, min_tracking_confidence=0.5) as 
             left_forward = forward_displacement(pos_buffers['left_wrist'], pos_buffers['left_shoulder'])
             right_forward = forward_displacement(pos_buffers['right_wrist'], pos_buffers['right_shoulder'])
 
-            # normalize forward threshold heuristically (values close to 0-1)
-            # combine checks
             if (rw_vel > VELOCITY_THRESHOLD and right_forward > 0.02) or \
                (lw_vel > VELOCITY_THRESHOLD and left_forward > 0.02):
                 aggressive_flag = True
@@ -98,3 +96,4 @@ with mp_pose.Pose(min_detection_confidence=0.5, min_tracking_confidence=0.5) as 
 
 cap.release()
 cv2.destroyAllWindows()
+
