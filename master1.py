@@ -37,9 +37,6 @@ H, W = frame.shape[:2]
 
 PRE_FRAMES = deque(maxlen=int(PRE_SEC * FPS))
 
-# --------------------------
-# STATE
-# --------------------------
 motion_sustain = 0
 alert_active = False
 last_alert_time = 0.0
@@ -211,3 +208,4 @@ finally:
     cap.release()
     cv2.destroyAllWindows()
     print("[INFO] Exiting, resources released.")
+
