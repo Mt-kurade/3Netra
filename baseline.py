@@ -3,7 +3,6 @@ import numpy as np
 import imutils 
 import time
 
-
 MIN_CONTOUR_AREA = 2000   
 MOVEMENT_FRAMES_REQUIRED = 3  
 ALERT_COOLDOWN = 2.0     
@@ -61,3 +60,4 @@ while True:
 
 cap.release()
 cv2.destroyAllWindows()
+
